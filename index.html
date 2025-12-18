@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sample Neil Armstrong</title>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Mueble AR</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+    <style>
+        /* Hacemos que ocupe toda la pantalla */
+        body { margin: 0; }
+        model-viewer { width: 100vw; height: 100vh; background-color: #f0f0f0; }
+    </style>
+</head>
+<body>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <script type="module" 
-    src="https://ajax.googleapis.com/ajax/libs/model-
-    viewer/3.1.1/model-viewer.min.js"></script>
-    </head>
-    <body>
-        <model-viewer alt="Neil Armstrong's Spacesuit from the 
-        Smithsonian Digitization Programs Office and National Air and 
-        Space Museum" src="shared-assets/models/NeilArmstrong.glb" ar 
-        environment-image="shared-assets/environments/moon_1k.hdr" 
-        poster="shared-assets/models/NeilArmstrong.webp" shadow-
-        intensity="1" camera-controls touch-action="pan-y">
-        </model-viewer>
-    </body>
+    <model-viewer 
+        src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
+        alt="Un modelo 3D de prueba"
+        ar 
+        ar-modes="webxr scene-viewer quick-look" 
+        camera-controls 
+        auto-rotate
+        shadow-intensity="1">
+        
+        <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; padding: 10px;">
+            👋 Ver en mi espacio
+        </button>
+        
+    </model-viewer>
+
+</body>
 </html>
